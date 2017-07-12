@@ -30,6 +30,12 @@ export default function Detail({ fund = {} }) {
           {fund.FundingFY2010}
         </div>
       </div>
+      <div>
+        {fund.MissionSpecificOrGeneralStem}
+      </div>
+      <div>
+        {fund.AgencyOrMissionRelatedNeeds}
+      </div>
     </div>
   );
 }
