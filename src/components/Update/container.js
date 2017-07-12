@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { compose } from "recompose";
+import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
+
+import { showNotificationRequest } from "../../store/actions";
 
 function handlers(WrappedComponent) {
   return class extends Component {
@@ -22,16 +25,18 @@ function handlers(WrappedComponent) {
     }
 
     handleSubmit(e) {
-      const { match: { params: { id } } } = this.props;
+      const { match: { params: { id } }, dispatch, history } = this.props;
       e.preventDefault();
       axios
         .put(API + `/${id}`, this.state)
         .then(res => {
           if (res.status === 200) {
-            this.props.history.push("/");
+            history.push("/");
+            dispatch(showNotificationRequest(id));
           }
         })
         .catch(e => {
+          // Swallow Error :(
           console.log(e);
         });
     }
@@ -53,4 +58,4 @@ function handlers(WrappedComponent) {
   };
 }
 
-export default compose(handlers, withRouter);
+export default compose(connect(), withRouter, handlers);
