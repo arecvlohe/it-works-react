@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Detail({ fund = {} }) {
   return (
     <div>
+      <Link to={`/update/${fund.Id}`}>Update Investment Name</Link>
       <div>
         {fund.YearEstablished}
       </div>

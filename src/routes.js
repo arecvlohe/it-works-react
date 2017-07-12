@@ -4,6 +4,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import List from "./components/List";
 import Detail from "./components/Detail";
 import Add from "./components/Add";
+import Update from "./components/Update";
 
 export default function() {
   return (
@@ -13,9 +14,10 @@ export default function() {
         <Link to="/add">Add Fund</Link>
       </nav>
       <div>
-        <Route exact path="/" component={List} />
         <Switch>
-          <Route exact path="/add" component={Add} />
+          <Route exact path="/" component={List} />
+          <Route path="/add" component={Add} />
+          <Route path="/update/:id" component={Update} />
           <Route path="/:id" component={Detail} />
         </Switch>
       </div>
