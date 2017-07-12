@@ -29,7 +29,7 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       API: JSON.stringify(
-        "http://iwg-prod-web-interview.azurewebsites.net/stem/v1/funds"
+        "https://iwg-prod-web-interview.azurewebsites.net/stem/v1/funds"
       )
     })
   ],

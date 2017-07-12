@@ -11,9 +11,12 @@
     "babel-polyfill": "^6.23.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
     "recompose": "^0.24.0",
-    "redux": "^3.7.1"
+    "redux": "^3.7.1",
+    "redux-most": "^0.5.2",
+    "reselect": "^3.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
