@@ -1,10 +1,18 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-  entry: path.resolve(__dirname, "src", "index"),
+  devtool: "source-map",
+  entry: [
+    "react-hot-loader/patch",
+    "webpack-dev-server/client?http://localhost:8080",
+    "webpack/hot/only-dev-server",
+    path.resolve(__dirname, "src", "index")
+  ],
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/"
   },
   module: {
     rules: [
@@ -15,9 +23,21 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin({
+      API: JSON.stringify(
+        "http://iwg-prod-web-interview.azurewebsites.net/stem/v1/funds"
+      )
+    })
+  ],
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
     historyApiFallback: true,
-    stats: "minimal"
+    publicPath: "/",
+    stats: "minimal",
+    hot: true
   }
 };
