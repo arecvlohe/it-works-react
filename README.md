@@ -25,3 +25,7 @@ Afterwards run the command:
 `npm run dev` 
 
 The application should now be running in your browser on `localhost:8080`.
+
+## Teaser
+
+![IT Works React](./it-works-react.png)
