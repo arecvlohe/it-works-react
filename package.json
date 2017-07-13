@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webpack-dev-server --progress",
     "prod": "webpack --config ./webpack.prod.js --progress --profile --colors",
-    "stats": "webpack --json > stats.json"
+    "stats": "webpack --json > stats.json",
+    "build": "npm run prod && serve dist/",
+    "now-start": "npm run build"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -20,6 +22,7 @@
     "redux": "^3.7.1",
     "redux-most": "^0.5.2",
     "reselect": "^3.0.1",
+    "serve": "^6.0.2",
     "styled-components": "^2.1.1"
   },
   "devDependencies": {
@@ -30,6 +33,8 @@
     "babel-preset-stage-0": "^6.24.1",
     "debug": "^2.6.8",
     "react-hot-loader": "next",
+    "uglify-js": "^3.0.24",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.2.0",
     "webpack-dev-server": "^2.5.1"
   }

@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   devtool: "cheap-module-source-map",
@@ -19,12 +20,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false
     }),
-    new webpack.UglifyJsPlugin(),
+    new UglifyJSPlugin(),
     new webpack.DefinePlugin({
       API: JSON.stringify(
         "https://iwg-prod-web-interview.azurewebsites.net/stem/v1/funds"
