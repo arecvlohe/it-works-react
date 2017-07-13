@@ -11,3 +11,16 @@
 been updated.
 o The notification should send the user to the fund details screen for STEM fund
 #2.
+
+
+## Setup
+
+To run locally `cd` into the application from your terminal and then run:
+
+`yarn install` or `npm install`
+
+Afterwards run the command:
+
+`npm run dev` 
+
+The application should now be running in your browser on `localhost:8080`.
