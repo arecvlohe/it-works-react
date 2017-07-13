@@ -26,6 +26,7 @@ function handlers(WrappedComponent) {
           }
         })
         .catch(e => {
+          // Swallow error :(
           console.log(e);
         });
     }
