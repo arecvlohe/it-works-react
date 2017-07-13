@@ -1,5 +1,7 @@
 # It Works React
 
+## Info
+
 - Libraries Used: JavaScript, React, Bootstrap
 
 - [x] Create a page with a listing of the funds
