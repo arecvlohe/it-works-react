@@ -8,8 +8,7 @@
 - [x] Create "Update" capabilities to allow the update of the "Investment Name"
 - [ ] Create a dynamic filter to reduce the amount of funds returned in the master list
 - [x] Bonus - Create a notification which fires after 2 minutes to simulate STEM fund #2 has
-been updated.
-o The notification should send the user to the fund details screen for STEM fund
+been updated. The notification should send the user to the fund details screen for STEM fund
 #2.
 
 
