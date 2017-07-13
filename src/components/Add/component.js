@@ -85,7 +85,7 @@ function Add({
             </div>
             <div className="form-group">
               <label htmlFor="BriefDescription">
-                Brief Description of Fund*
+                Brief Description of Fund
               </label>
               <textarea
                 id="BriefDescription"
@@ -94,12 +94,11 @@ function Add({
                 value={BriefDescription}
                 onChange={handleChange}
                 type="textarea"
-                required
               />
             </div>
             <div className="form-group">
               <label htmlFor="PrimaryInvestmentObjective">
-                Primary Investment Objective<span className="required">*</span>
+                Primary Investment Objective
               </label>
               <textarea
                 id="PrimaryInvestmentObjective"
@@ -108,7 +107,6 @@ function Add({
                 value={PrimaryInvestmentObjective}
                 onChange={handleChange}
                 type="textarea"
-                required
               />
             </div>
             <div className="form-group">
@@ -126,7 +124,7 @@ function Add({
             </div>
             <div className="form-group">
               <label htmlFor="MissionSpecificOrGeneralStem">
-                Mission Specific or General STEM<span className="required">*</span>
+                Mission Specific or General STEM
               </label>
               <input
                 id="MissionSpecificOrGeneralStem"
@@ -135,12 +133,11 @@ function Add({
                 value={MissionSpecificOrGeneralStem}
                 onChange={handleChange}
                 type="text"
-                required
               />
             </div>
             <div className="form-group">
               <label htmlFor="FundingFY2008">
-                Funding for Fiscal Year 2008<span className="required">*</span>
+                Funding for Fiscal Year 2008
               </label>
               <input
                 className="form-control"
@@ -151,12 +148,11 @@ function Add({
                 type="number"
                 step="0.01"
                 placeholder="ex. 10 or 10.1 or 10.11"
-                required
               />
             </div>
             <div className="form-group">
               <label htmlFor="FundingFY2009">
-                Funding for Fiscal Year 2009<span className="required">*</span>
+                Funding for Fiscal Year 2009
               </label>
               <input
                 id="FundingFY2009"
@@ -167,12 +163,11 @@ function Add({
                 type="number"
                 step="0.01"
                 placeholder="ex. 10 or 10.1 or 10.11"
-                required
               />
             </div>
             <div className="form-group">
               <label htmlFor="FundingFy2010">
-                Funding for Fiscal Year 2010<span className="required">*</span>
+                Funding for Fiscal Year 2010
               </label>
               <input
                 id="FundingFY2010"
@@ -183,7 +178,6 @@ function Add({
                 type="number"
                 step="0.01"
                 placeholder="ex. 10 or 10.1 or 10.11"
-                required
               />
             </div>
             <button type="submit" className="btn btn-primary">

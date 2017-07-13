@@ -1,9 +1,6 @@
 # It Works React
 
-Libraries Used:
-JavaScript
-React
-Bootstrap
+- Libraries Used: JavaScript, React, Bootstrap
 
 - [x] Create a page with a listing of the funds
 - [x] Create a Detail view which displays the detail of fund when clicked
