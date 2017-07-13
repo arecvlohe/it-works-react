@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --progress"
+    "dev": "webpack-dev-server --progress",
+    "prod": "webpack --config ./webpack.prod.js --progress --profile --colors",
+    "stats": "webpack --json > stats.json"
   },
   "dependencies": {
     "axios": "^0.16.2",
