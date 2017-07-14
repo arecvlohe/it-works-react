@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   devtool: "source-map",
@@ -24,6 +25,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: "IT Works React",
+      filename: path.resolve(__dirname, "dist", "index.html"),
+      template: path.resolve(__dirname, "src", "template", "index.html")
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),

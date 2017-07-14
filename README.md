@@ -29,3 +29,21 @@ The application should now be running in your browser on `localhost:8080`.
 ## Teaser
 
 ![IT Works React](./it-works-react.png)
+
+## See it in DEV
+
+To run locally in development mode run:
+
+`npm run dev`
+
+## See it in PROD
+
+To run locally in production mode run:
+
+`npm run serve:prod`
+
+## See it LIVE
+
+To see it live go to:
+
+[https://it-works-react.now.sh/](https://it-works-react.now.sh/)

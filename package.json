@@ -5,14 +5,16 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --progress",
-    "prod": "webpack --config ./webpack.prod.js --progress --profile --colors",
+    "prod": "NODE_ENV=production webpack --config ./webpack.prod.js --progress --profile --colors",
     "stats": "webpack --json > stats.json",
-    "build": "npm run prod && serve dist/",
-    "now-start": "npm run build"
+    "build": "npm run prod",
+    "now-start": "node ./server/index.js",
+    "serve:prod": "npm run prod && node ./server/index.js"
   },
   "dependencies": {
     "axios": "^0.16.2",
     "babel-polyfill": "^6.23.0",
+    "express": "^4.15.3",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",
@@ -31,11 +33,15 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "chunk-manifest-webpack-plugin": "^1.1.0",
+    "clean-webpack-plugin": "^0.1.16",
     "debug": "^2.6.8",
+    "html-webpack-plugin": "^2.29.0",
     "react-hot-loader": "next",
     "uglify-js": "^3.0.24",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.2.0",
+    "webpack-chunk-hash": "^0.4.0",
     "webpack-dev-server": "^2.5.1"
   }
 }
